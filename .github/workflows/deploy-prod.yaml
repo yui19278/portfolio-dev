@@ -82,7 +82,7 @@ jobs:
           cd ${{ env.LOCAL_DEV_REPOSITORY }}
           ${HOME}/.volta/bin/volta -v
           ${HOME}/.volta/bin/volta run --bundled-npm npm ci
-      - name: Build react
+      - name: Build astro
         run: |
           set -x
           cd ${{ env.LOCAL_DEV_REPOSITORY }}
