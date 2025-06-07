@@ -1,5 +1,5 @@
 # workflow名
-name: Deploy dev
+name: Deploy prod
 # workflowの実行をトリガするイベントを記述する
 on:
   # 「v0.1.0」のようなリリースタグ作成にトリガーして、workflowを実行
