@@ -1,4 +1,3 @@
-import { CiSquareRemove } from "react-icons/ci";
 import { FaAws, FaDocker, FaJava, FaReact, FaVuejs } from 'react-icons/fa';
 import { GrVmware } from "react-icons/gr";
 import {
@@ -25,7 +24,10 @@ import {
     SiTypescript
 } from 'react-icons/si';
 import { TbBrandCSharp } from "react-icons/tb";
-import LispLogo from '../assets/Lisplogo.png';
+// import LispLogo from '../assets/Lisplogo.png';
+
+import { CiSquareRemove } from "react-icons/ci";
+//使えないアイコン用
 
 export interface Skill {
   name: string
@@ -40,17 +42,19 @@ export const skills: Record<string, Skill[]> = {
     { name: 'Kotlin', icon: <SiKotlin />  },
     { name: 'Python', icon: <SiPython />  },
     { name: 'Csharp', icon: <TbBrandCSharp />  },
-    {
-      name: 'Lisp',
-      icon: (
-        <img
-          src={LispLogo.src}
-          alt="Lisp"
-          width="16"    
-          height="16"
-        />
-      ),
-    },
+    // {
+    //   name: 'Lisp',
+    //   icon: (
+    //     <img
+    //       src={LispLogo.src}
+    //       alt="Lisp"
+    //       width="16"    
+    //       height="16"
+    //     />
+    //   ),
+    // },
+    // 何故か読みこまないので，後で修正
+    { name: 'Lisp', icon: <CiSquareRemove/> },
   ],
   frontend: [
     { name: 'Astro',      icon: <SiAstro />      },
