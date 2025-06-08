@@ -29,4 +29,10 @@
     "react-icons": "^5.5.0",
     "vite-plugin-svgr": "^4.3.0"
   }
+//  ,
+//  "scripts": {
+//    "build:frontend": "astro build",
+//    "build:backend": "cd backend && sbt stage",
+//    "build": "npm run build:frontend && npm run build:backend"
+//  }
 }
