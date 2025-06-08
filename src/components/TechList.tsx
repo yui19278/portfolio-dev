@@ -8,7 +8,6 @@ export default function SkillsSection() {
         {Object.entries(skills).map(([category, list]) => (
           <div key={category} className="col-md-6 mb-3">
             <h5 className="text-lg font-medium mb-2">{category}</h5>
-            {/* list-unstyled（Bootstrap） / list-none（Tailwind） を指定 */}
             <ul className="d-flex flex-wrap list-unstyled p-0 m-0">
               {list.map(skill => (
                 <li key={skill.name} className="d-flex align-items-center me-4 mb-2">
