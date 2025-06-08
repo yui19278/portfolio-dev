@@ -1,17 +1,24 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import About from "../components/About.astro";
+import Career from "../components/Career.astro";
 import Footer from "../components/Footer.astro";
+// import Header from "../components/Header.tsx";
+import Projects from "../components/Projects.astro";
+import Techlist from "../components/TechList.tsx";
+import Vision from "../components/Vision.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="ja">
-  <BaseHead title="yui19278.github.io" />
-  <body
-    style="font-family: 'Zen Kurenaido', sans-serif; font-family: 'Zen Kurenaido', cursive;"
-  >
-    <main>
-      <h1>yui19278.github.io</h1>
-      <p>Hello, world!</p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout title="yui19278 / Portfolio">
+  <!-- <Header client:load /> -->
+
+  <main class="container py-4">
+    <About />
+    <Career />
+    <Techlist />
+    <Projects />
+    <Vision />
+  </main>
+</BaseLayout>
+
+<Footer />
