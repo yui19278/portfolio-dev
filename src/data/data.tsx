@@ -1,27 +1,27 @@
 import { FaAws, FaDocker, FaJava, FaReact, FaVuejs } from 'react-icons/fa';
 import { GrVmware } from "react-icons/gr";
 import {
-    SiAstro,
-    SiClickup,
-    SiConfluence,
-    SiGithub,
-    SiGitlab,
-    SiHeroku,
-    SiJavascript,
-    SiJira,
-    SiKotlin,
-    SiKubernetes,
-    // SiLisp,
-    SiMysql,
-    SiObsidian,
-    SiProxmox,
-    SiPython,
-    SiRedis,
-    SiRedmine,
-    SiScala,
-    SiSlack,
-    SiSqlite,
-    SiTypescript
+  SiAstro,
+  SiClickup,
+  SiConfluence,
+  SiGithub,
+  SiGitlab,
+  SiHeroku,
+  SiJavascript,
+  SiJira,
+  SiKotlin,
+  SiKubernetes,
+  // SiLisp,
+  SiMysql,
+  SiObsidian,
+  SiProxmox,
+  SiPython,
+  SiRedis,
+  SiRedmine,
+  SiScala,
+  SiSlack,
+  SiSqlite,
+  SiTypescript
 } from 'react-icons/si';
 import { TbBrandCSharp } from "react-icons/tb";
 // import LispLogo from '../assets/Lisplogo.png';
@@ -92,8 +92,8 @@ export const skills: Record<string, Skill[]> = {
 export const projects = [
     {
     title: "ポートフォリオサイト yui19278.github.io",
-    description: "自分のスキルを整理するために開発中．Astro, Reactで構築．",
-    tags: ["Astro", "React", "TypeScript"],
+    description: "自分のスキルを整理するために開発中．フロントエンドをAstro, Reactで構築，バックエンドをScala, MySQL, Dockerで構築．",
+    tags: ["Astro", "React", "TypeScript", "Scala", "MySQL", "Docker"],
     link: "https://github.com/yui19278/portfolio-dev",
     },
     {
