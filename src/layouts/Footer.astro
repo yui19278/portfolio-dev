@@ -1,6 +1,7 @@
 ---
 import { CiMail } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import AccessCounter from '../components/AccessCounter.tsx';
 const currentYear = 2025;
 ---
 
@@ -98,6 +99,7 @@ const currentYear = 2025;
     </div>
 
     <div class="footer-bottom text-center">
+      <AccessCounter client:visible />
       &copy; {currentYear} yui19278. All rights reserved.
     </div>
   </div>

@@ -1,0 +1,10 @@
+.access-counter {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.9em;
+    padding-bottom: 1rem; /* Adjust padding */
+}
+
+.access-counter .error-message {
+    color: #dc3545;
+}
