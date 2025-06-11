@@ -9,4 +9,13 @@ export default defineConfig({
   site: "https://yui19278.github.io/",
   base: "/",
   integrations: [react(), mdx(), sitemap(), icon()],
+
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9000',
+        changeOrigin: true,
+      }
+    }
+  }
 });
