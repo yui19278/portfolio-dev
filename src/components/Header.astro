@@ -1,0 +1,77 @@
+---
+import { FaGithub } from "react-icons/fa";
+---
+
+<style>
+  .navbar-custom {
+    transition:
+      background-color 0.3s ease-in-out,
+      backdrop-filter 0.3s ease-in-out;
+  }
+  .navbar-custom.scrolled {
+    background-color: rgba(var(--gray-dark), 0.85);
+    backdrop-filter: saturate(180%) blur(5px);
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+  }
+</style>
+
+<nav
+  class="navbar navbar-expand-lg fixed-top shadow-sm py-2 navbar-custom navbar-dark"
+  id="main-navbar"
+>
+  <div class="container">
+    <a class="navbar-brand" href="#top">yui19278</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main-nav"
+      aria-controls="main-nav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-nav">
+      <ul class="navbar-nav me-auto gap-2">
+        <li class="nav-item"><a class="nav-link" href="#about">自己紹介</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Career">経歴</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">技術スタック</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">制作物</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#vision">思い描くエンジニア像</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center gap-1"
+            href="https://github.com/yui19278"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub /> github
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById("main-navbar");
+  if (navbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+  }
+</script>

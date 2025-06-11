@@ -7,5 +7,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://yui19278.github.io/",
   base: "/",
-  integrations: [react(), mdx(), sitemap()],
+  integrations: [react(), mdx(), sitemap(), icon()],
 });
