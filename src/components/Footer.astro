@@ -1,7 +1,104 @@
 ---
-
+import { CiMail } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+const currentYear = 2025;
 ---
 
-<footer>
-  <p>mail: wisteriat.u@gmail.com</p>
+<style>
+  .site-footer {
+    background-color: rgb(var(--gray-dark));
+    color: rgba(var(--gray-light), 0.7);
+    padding: 4rem 0 2rem 0;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(var(--gray-light), 0.1);
+  }
+
+  .footer-links-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: rgba(var(--gray-light), 0.5);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    color: rgba(var(--gray-light), 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(var(--gray-light), 0.1);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    font-size: 0.8rem;
+  }
+</style>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0 footer-links">
+        <h5 class="footer-links-heading">Sitemap</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Career">Career</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0 footer-links">
+        <h5 class="footer-links-heading">Github</h5>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/yui19278"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+              yui19278
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0 footer-links">
+        <h5 class="footer-links-heading">Contact</h5>
+        <ul>
+          <li>
+            <a href="mailto:wisteriat.u@gmail.com">
+              <CiMail />
+              wisteriat.u@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      &copy; {currentYear} yui19278. All rights reserved.
+    </div>
+  </div>
 </footer>

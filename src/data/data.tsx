@@ -94,7 +94,7 @@ export const projects = [
     title: "ポートフォリオサイト yui19278.github.io",
     description: "自分のスキルを整理するために開発中．フロントエンドをAstro, Reactで構築，バックエンドをScala, MySQL, Dockerで構築．",
     tags: ["Astro", "React", "TypeScript", "Scala", "MySQL", "Docker"],
-    link: "https://github.com/yui19278/portfolio-dev",
+    link: "https://github.com/yui19278/yui19278.github.io",
     },
     {
     title: "株投資シミュレーションゲーム",
