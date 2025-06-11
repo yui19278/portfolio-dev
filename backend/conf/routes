@@ -1,0 +1,2 @@
+GET     /api/counter              backend.app.controllers.CounterController.getCount
+POST    /api/counter/increment    backend.app.controllers.CounterController.increment

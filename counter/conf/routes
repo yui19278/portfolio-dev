@@ -1,2 +1,0 @@
-# アクセスカウント API
-GET   /api/hit            controllers.HitController.hit(path: String ?= "/")
