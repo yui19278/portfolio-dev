@@ -1,5 +1,4 @@
 import {SkillCard, skills} from '../data/data';
-import '../styles/tailwind.css';
 
 export default function SkillsSection() {
     return (
