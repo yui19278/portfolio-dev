@@ -7,7 +7,7 @@ export default function ProjectList() {
   return (
     <section id="projects" className="my-5">
       <h2 className="text-center mb-5">制作物</h2>
-      <div className="row g-4">
+      <div className="row g-4 px-3">
         {projects.map((project, index) => (
           <div key={index} className="col-md-6">
             <Card
