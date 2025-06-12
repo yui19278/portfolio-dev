@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './AccessCounter.css';
 
+const API_BASE_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:9000';
+
 export default function AccessCounter() {
     const [count, setCount] = useState<number | null>(null);
     const [error, setError] = useState<string | null>(null);
@@ -8,7 +10,7 @@ export default function AccessCounter() {
     useEffect(() => {
         const fetchCount = async () => {
             try {
-                const response = await fetch('http://localhost:9000/api/counter/increment', {
+                const response = await fetch(`${API_BASE_URL}/api/counter/increment`, {
                     method: 'POST',
                 });
 
