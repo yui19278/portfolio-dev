@@ -10,7 +10,6 @@ export default function AccessCounter() {
     useEffect(() => {
         const fetchCount = async () => {
             try {
-                // URL
                 const response = await fetch(`${API_BASE_URL}/api/counter/increment`, {
                     method: 'POST',
                 });
@@ -23,7 +22,7 @@ export default function AccessCounter() {
                 setCount(data.count);
             } catch (e) {
                 console.error('Failed to fetch access count:', e);
-                setError('??????????????????');
+                setError('カウンターの読み込みに失敗しました。');
             }
         };
 
