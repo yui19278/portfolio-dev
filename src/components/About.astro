@@ -1,14 +1,27 @@
-<section id="about" class="text-center py-5">
-  <img
-    width="150"
-    height="150"
-    alt="yui19278"
-    src="https://avatars.githubusercontent.com/u/44569789?v=4"
-    class="rounded-circle mb-3"
-  />
-  <h1 class="mb-3">yui19278's Portfolio</h1>
-  <h2>自己紹介</h2>
-  <p>id: yui19278</p>
-  <p>得意領域: バックエンド</p>
-  <p>趣味: VR / FPS / キーボード</p>
+---
+import AccessCounter from '../components/AccessCounter.tsx';
+---
+
+<section id="about" class="text-center py-10 md:py-16 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <img
+        width="150"
+        height="150"
+        alt="yui19278"
+        src="https://avatars.githubusercontent.com/u/44569789?v=4"
+        class="rounded-full mb-4 mx-auto shadow-lg border-4 border-white dark:border-gray-700"
+    />
+    <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-2">yui19278's Portfolio</h1>
+    <div class="max-w-md mx-auto text-gray-600 dark:text-gray-300">
+      <h2 class="text-2xl font-semibold mt-6 mb-3 text-gray-700 dark:text-gray-200">自己紹介</h2>
+      <div class="space-y-2">
+        <p><span class="font-semibold">id:</span> yui19278</p>
+        <p><span class="font-semibold">得意領域:</span> バックエンド</p>
+        <p><span class="font-semibold">趣味:</span> VR / FPS / キーボード</p>
+      </div>
+    </div>
+    <div class="mt-12">
+      <AccessCounter client:visible />
+    </div>
+  </div>
 </section>
