@@ -44,7 +44,7 @@ export const skills: Record<string, Skill[]> = {
     { name: 'Scala',  icon: <SiScala /> ,           comment:
             'Scala には特別な思い入れがあります. 高 2 のとき夢中になったマイクラ鯖が, 学生が Scala で開発した OSS だったことが私のプログラマ人生の原点です',  },
     { name: 'Java',   icon: <FaJava />,             comment: 'はじめて触ったバックエンド言語です'},
-    { name: 'Kotlin', icon: <SiKotlin />,           comment: 'インターンで初めて触りました' },
+    { name: 'Kotlin', icon: <SiKotlin />,           comment: 'インターンでLine風メモ帳アプリを作成する際に使用しました' },
     { name: 'Python', icon: <SiPython />,           comment: 'Discord bot を開発する際に使っています'   },
     { name: 'Csharp', icon: <TbBrandCSharp />,      comment: '大学 3 年で VR にのめり込み、再び使うようになりました'  },
     {name: 'C++',     icon: <SiCplusplusbuilder />, comment: '競プロの勉強, 講習会に使用しています' },
@@ -75,19 +75,19 @@ export const skills: Record<string, Skill[]> = {
     { name: 'AWS',        icon: <FaAws />,          comment: 'インターンで利用しました'         },
     { name: 'GKE',        icon: <SiGooglecloud />,  comment: '無料枠が手厚いのでうれしいです',
       },
-    { name: 'Proxmox',    icon: <SiProxmox />,      comment: 'マイクラ鯖のホストに使用しました'     },
-    { name: 'VMware',     icon: <GrVmware />,       comment: '研究室で利用しています'         },
-    { name: 'Heroku',     icon: <SiHeroku />,       comment: '無料プランの時代に, 初めて作った Discord bot をホストしました'   },
+    { name: 'Proxmox',    icon: <SiProxmox />,      comment: 'マイクラ鯖のホストに使用しています'     },
+    { name: 'VMware',     icon: <GrVmware />,       comment: '研究室Kubernetesで利用しています'         },
+    { name: 'Heroku',     icon: <SiHeroku />,       comment: '無料プランの時代に出会い, Discord bot をホストしました'   },
   ],
   databases: [
     { name: 'MySQL',      icon: <SiMysql />,        comment: 'インターンや趣味開発で使用' },
-    { name: 'SQLite',     icon: <SiSqlite />,       comment: '5dayインターンで使用しました' },
+    { name: 'SQLite',     icon: <SiSqlite />,       comment: 'インターンでLine風メモ帳アプリを作成する際に使用しました' },
     { name: 'Redis',      icon: <SiRedis />,        comment: 'インターンで使用. 今後は趣味開発にも使いたいです' },
   ],
   tools: [
     { name: 'GitHub',     icon: <SiGithub />,       comment: 'コミットぐちゃぐちゃになりがち' },
     { name: 'GitLab',     icon: <SiGitlab />,       comment: 'アルバイトで使用' },
-    { name: 'esa',        icon: <CiSquareRemove/>,  comment: 'アルバイトで使用'}, //https://docs.esa.io/posts/125 で決められている パス
+    { name: 'esa',        icon: <CiSquareRemove/>,  comment: 'アルバイトで使用  スターを付ける ☆'}, //https://docs.esa.io/posts/125 で決められている パス
     { name: 'Confluence', icon: <SiConfluence />,   comment: 'インターンで読み漁りました' },
     { name: 'Jira',       icon: <SiJira />,         comment: 'インターンで使用'       },
     { name: 'Redmine',    icon: <SiRedmine /> ,     comment: 'アルバイトや趣味開発で使用'  },
