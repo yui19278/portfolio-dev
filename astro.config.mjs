@@ -17,6 +17,9 @@ export default defineConfig({
       mdx(),
       sitemap(),
       icon()],
+    vite: {
+        plugins: [tailwindcss()],
+    },
 
   server: {
     proxy: {
