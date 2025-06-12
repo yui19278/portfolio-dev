@@ -21,6 +21,7 @@ export default function AccessCounter({ text }: Props) {
             // dev表示用
             if (import.meta.env.DEV) {
                 setTimeout(() => setCount(12345), 1000);
+
                 return;
             }
             try {
