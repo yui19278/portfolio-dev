@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './AccessCounter.css';
 
+const API_BASE_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:9000';
+
 export default function AccessCounter() {
     const [count, setCount] = useState<number | null>(null);
     const [error, setError] = useState<string | null>(null);
@@ -8,7 +10,8 @@ export default function AccessCounter() {
     useEffect(() => {
         const fetchCount = async () => {
             try {
-                const response = await fetch('http://localhost:9000/api/counter/increment', {
+                // URL
+                const response = await fetch(`${API_BASE_URL}/api/counter/increment`, {
                     method: 'POST',
                 });
 
@@ -20,7 +23,7 @@ export default function AccessCounter() {
                 setCount(data.count);
             } catch (e) {
                 console.error('Failed to fetch access count:', e);
-                setError('カウンターの読み込みに失敗しました。');
+                setError('??????????????????');
             }
         };
 
@@ -30,7 +33,7 @@ export default function AccessCounter() {
     return (
         <div className="access-counter">
             {error && <p className="error-message">{error}</p>}
-            {count !== null && <p>現在の訪問者数は {count} 人です</p>}
+            {count !== null && <p>???????? {count} ???</p>}
         </div>
     );
 }
