@@ -4,22 +4,24 @@ import { defineConfig } from "astro/config";
 
 import react from "@astrojs/react";
 import icon from "astro-icon";
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  vite: {
+      plugins: [
+          tailwindcss(),
+      ],
+  },
   site: "https://yui19278.github.io/",
   base: "/",
   integrations: [
       react(),
-      tailwind({
+      tailwindcss({
         config: { path: './tailwind.config.js' },
       }),
       mdx(),
       sitemap(),
       icon()],
-    vite: {
-        plugins: [tailwindcss()],
-    },
 
   server: {
     proxy: {
