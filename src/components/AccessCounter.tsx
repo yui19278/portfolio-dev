@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const API_BASE_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:9000';
 
 interface Props {
-
     text?: (count: number) => React.ReactNode;
 }
 
@@ -19,8 +18,10 @@ export default function AccessCounter({ text }: Props) {
 
     useEffect(() => {
         const fetchCount = async () => {
+            // dev表示用
             if (import.meta.env.DEV) {
-                setTimeout(() => setCount(12345), 1000); // ローディング表示の確認用に少し遅延
+                setTimeout(() => setCount(12345), 1000);
+
                 return;
             }
             try {
@@ -29,7 +30,6 @@ export default function AccessCounter({ text }: Props) {
                 setCount(data.count);
             } catch (e) {
                 console.error('Failed to fetch access count:', e);
-                setError('カウンターの読み込みに失敗しました。');
             }
         };
         fetchCount();

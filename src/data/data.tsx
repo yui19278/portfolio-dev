@@ -42,7 +42,7 @@ export interface Skill {
 export const skills: Record<string, Skill[]> = {
   backend: [
     { name: 'Scala',  icon: <SiScala /> ,           comment:
-            '高 2 のとき夢中になったマイクラ鯖が, 学生が Scala で開発した OSS だったことが私のプログラマ人生の原点です',  },
+            '高 2 のとき夢中になったマイクラ鯖が, 学生が Scala で開発した OSS だったことが, 私のプログラマ人生の原点です',  },
     { name: 'Java',   icon: <FaJava />,             comment: 'はじめて触ったバックエンド言語です'},
     { name: 'Kotlin', icon: <SiKotlin />,           comment: 'インターンでLine風メモ帳アプリを作成する際に使用しました' },
     { name: 'Python', icon: <SiPython />,           comment: 'Discord bot を開発する際に使っています'   },
