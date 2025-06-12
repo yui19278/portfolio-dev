@@ -20,8 +20,8 @@ export default function SkillsSection() {
             ))}
           </div>
           {category === 'backend' && (
-            <p className="mt-4 text-center text-sm text-muted">
-              ※この中で、Scalaには特別な思い入れがあります．高2の時に夢中になったマイクラ鯖が，学生がScalaを用いて開発したOSSであったことが私のプログラマ人生のきっかけです．
+              <p className="mt-4 text-center text-sm text-muted px-8">
+                  ※この中で、Scalaには特別な思い入れがあります．高2の時に夢中になったマイクラ鯖が，学生がScalaを用いて開発したOSSであったことが私のプログラマ人生のきっかけです．
             </p>
           )}
         </div>

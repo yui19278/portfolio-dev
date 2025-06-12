@@ -32,7 +32,7 @@ export default function AccessCounter() {
     return (
         <div className="access-counter">
             {error && <p className="error-message">{error}</p>}
-            {count !== null && <p>現在の訪問者数は {count} 人です</p>}
+{count !== null && <p>現在の訪問者数は {count} 人です</p>}
         </div>
     );
 }
