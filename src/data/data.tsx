@@ -11,6 +11,8 @@ import {
   SiJira,
   SiKotlin,
   SiKubernetes,
+  SiCplusplusbuilder,
+  SiGooglecloud,
   // SiLisp,
   SiMysql,
   SiObsidian,
@@ -27,21 +29,25 @@ import { TbBrandCSharp } from "react-icons/tb";
 // import LispLogo from '../assets/Lisplogo.png';
 
 import { CiSquareRemove } from "react-icons/ci";
+import {useState} from "react";
 //使えないアイコン用
 
 export interface Skill {
   name: string
   icon: JSX.Element
+  comment?: string
 }
 
 
 export const skills: Record<string, Skill[]> = {
   backend: [
-    { name: 'Scala',  icon: <SiScala />   },
-    { name: 'Java',   icon: <FaJava />    },
-    { name: 'Kotlin', icon: <SiKotlin />  },
-    { name: 'Python', icon: <SiPython />  },
-    { name: 'Csharp', icon: <TbBrandCSharp />  },
+    { name: 'Scala',  icon: <SiScala /> ,           comment:
+            'Scala には特別な思い入れがあります. 高 2 のとき夢中になったマイクラ鯖が, 学生が Scala で開発した OSS だったことが私のプログラマ人生の原点です',  },
+    { name: 'Java',   icon: <FaJava />,             comment: 'はじめて触ったバックエンド言語です'},
+    { name: 'Kotlin', icon: <SiKotlin />,           comment: 'インターンで初めて触りました' },
+    { name: 'Python', icon: <SiPython />,           comment: 'Discord bot を開発する際に使っています'   },
+    { name: 'Csharp', icon: <TbBrandCSharp />,      comment: '大学 3 年で VR にのめり込み、再び使うようになりました'  },
+    {name: 'C++',     icon: <SiCplusplusbuilder />, comment: '競プロの勉強, 講習会に使用しています' },
     // {
     //   name: 'Lisp',
     //   icon: (
@@ -54,38 +60,40 @@ export const skills: Record<string, Skill[]> = {
     //   ),
     // },
     // 何故か読みこまないので，後で修正
-    { name: 'Lisp', icon: <CiSquareRemove/> },
+    { name: 'Lisp', icon: <CiSquareRemove/>,        comment: 'Common Lisp 派です' },
   ],
   frontend: [
-    { name: 'Astro',      icon: <SiAstro />      },
-    { name: 'JavaScript', icon: <SiJavascript /> },
-    { name: 'TypeScript', icon: <SiTypescript /> },
-    { name: 'React',      icon: <FaReact />       },
-    { name: 'Vue.js',        icon: <FaVuejs  />    },
+    { name: 'Astro',      icon: <SiAstro /> ,       comment: 'このサイトのフロントエンドに使用しています' },
+    { name: 'JavaScript', icon: <SiJavascript />,   comment: '私の Twitter ハンドルネームの由来になった言語です' },
+    { name: 'TypeScript', icon: <SiTypescript />,   comment: '型安全が正義' },
+    { name: 'React',      icon: <FaReact />,        comment: '研究室での開発に採用しました, このサイトでも使用しています'       },
+    { name: 'Vue.js',     icon: <FaVuejs  />,       comment: 'アルバイトで初めて使いました. 実務経験は 6 か月ほどです'    },
   ],
   infrastructure: [
-    { name: 'Docker',     icon: <FaDocker />      },
-    { name: 'Kubernetes', icon: <SiKubernetes />  },
-    { name: 'AWS',        icon: <FaAws />         },
-    { name: 'Proxmox',    icon: <SiProxmox />     },
-    { name: 'VMware',     icon: <GrVmware />      },
-    { name: 'Heroku',     icon: <SiHeroku />      },
+    { name: 'Docker',     icon: <FaDocker />,       comment: '高校時代にマイクラ鯖を調べていて出会いました'    },
+    { name: 'Kubernetes', icon: <SiKubernetes />,   comment: '自宅に Raspberry Pi クラスタがあります'  },
+    { name: 'AWS',        icon: <FaAws />,          comment: 'インターンで利用しました'         },
+    { name: 'GKE',        icon: <SiGooglecloud />,  comment: '無料枠が手厚いのでうれしいです',
+      },
+    { name: 'Proxmox',    icon: <SiProxmox />,      comment: 'マイクラ鯖のホストに使用しました'     },
+    { name: 'VMware',     icon: <GrVmware />,       comment: '研究室で利用しています'         },
+    { name: 'Heroku',     icon: <SiHeroku />,       comment: '無料プランの時代に, 初めて作った Discord bot をホストしました'   },
   ],
   databases: [
-    { name: 'MySQL',  icon: <SiMysql />  },
-    { name: 'SQLite', icon: <SiSqlite /> },
-    { name: 'Redis',  icon: <SiRedis />  },
+    { name: 'MySQL',      icon: <SiMysql />,        comment: 'インターンや趣味開発で使用' },
+    { name: 'SQLite',     icon: <SiSqlite />,       comment: '5dayインターンで使用しました' },
+    { name: 'Redis',      icon: <SiRedis />,        comment: 'インターンで使用. 今後は趣味開発にも使いたいです' },
   ],
   tools: [
-    { name: 'GitHub',     icon: <SiGithub />    },
-    { name: 'GitLab',     icon: <SiGitlab />    },
-    { name: 'esa',        icon: <CiSquareRemove/>}, //https://docs.esa.io/posts/125 で決められている パス
-    { name: 'Confluence', icon: <SiConfluence /> },
-    { name: 'Jira',       icon: <SiJira />       },
-    { name: 'Redmine',    icon: <SiRedmine />    },
-    { name: 'ClickUp',    icon: <SiClickup />    },
-    { name: 'Obsidian',   icon: <SiObsidian />   },
-    { name: 'Slack',      icon: <SiSlack />      },
+    { name: 'GitHub',     icon: <SiGithub />,       comment: 'コミットぐちゃぐちゃになりがち' },
+    { name: 'GitLab',     icon: <SiGitlab />,       comment: 'アルバイトで使用' },
+    { name: 'esa',        icon: <CiSquareRemove/>,  comment: 'アルバイトで使用'}, //https://docs.esa.io/posts/125 で決められている パス
+    { name: 'Confluence', icon: <SiConfluence />,   comment: 'インターンで読み漁りました' },
+    { name: 'Jira',       icon: <SiJira />,         comment: 'インターンで使用'       },
+    { name: 'Redmine',    icon: <SiRedmine /> ,     comment: 'アルバイトや趣味開発で使用'  },
+    { name: 'ClickUp',    icon: <SiClickup /> ,     comment: 'アルバイトで使用. デザインがおしゃれです' },
+    { name: 'Obsidian',   icon: <SiObsidian /> ,    comment: '日々のメモ帳. これを使い始める前は VS Code でメモを書いていました'},
+    { name: 'Slack',      icon: <SiSlack /> ,       comment: 'おすすめのチャンネルがあれば教えてください !'  },
   ],
 }
 
@@ -115,3 +123,31 @@ export const projects = [
     link: "https://github.com/yui19278/tabibot",
     },
 ];
+
+
+export const SkillCard = ({ skill }: { skill: Skill }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className="relative flex flex-col items-center justify-center p-4 w-32 h-32 sm:w-36 sm:h-36 bg-white dark:bg-gray-800 rounded-2xl shadow-md transition-all duration-300 ease-in-out cursor-pointer overflow-hidden"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className={`flex flex-col items-center justify-center transition-opacity duration-300 ${isHovered && skill.comment ? 'opacity-0' : 'opacity-100'}`}>
+                <div className="text-4xl sm:text-5xl text-gray-700 dark:text-gray-300 mb-2">{skill.icon}</div>
+                <p className="font-semibold text-center text-gray-800 dark:text-gray-200">{skill.name}</p>
+            </div>
+
+            {skill.comment && (
+                <div
+                    className={`absolute inset-0 flex items-center justify-center p-3 bg-gray-800 bg-opacity-90 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                >
+                    <p className="text-xs text-center text-white">
+                        {skill.comment}
+                    </p>
+                </div>
+            )}
+        </div>
+    );
+};

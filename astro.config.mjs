@@ -4,11 +4,19 @@ import { defineConfig } from "astro/config";
 
 import react from "@astrojs/react";
 import icon from "astro-icon";
+import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: "https://yui19278.github.io/",
   base: "/",
-  integrations: [react(), mdx(), sitemap(), icon()],
+  integrations: [
+      react(),
+      tailwind({
+        config: { path: './tailwind.config.js' },
+      }),
+      mdx(),
+      sitemap(),
+      icon()],
 
   server: {
     proxy: {

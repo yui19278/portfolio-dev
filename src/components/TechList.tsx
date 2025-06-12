@@ -1,31 +1,22 @@
-import { Card } from 'react-bootstrap';
-import { skills } from '../data/data';
-import './TechList.css';
+import {SkillCard, skills} from '../data/data';
+import '../styles/tailwind.css';
 
 export default function SkillsSection() {
-  return (
-    <section id="skills" className="my-5">
-      <h2 className="text-center mb-5">技術スタック</h2>
-      {Object.entries(skills).map(([category, list]) => (
-        <div key={category} className="mb-5">
-          <h3 className="text-xl font-semibold mb-4 text-center">{category}</h3>
-          <div className="d-flex flex-wrap justify-content-center gap-4">
-            {list.map(skill => (
-              <Card key={skill.name} className="tech-card text-center shadow-sm">
-                <Card.Body>
-                  <div className="tech-icon mb-2">{skill.icon}</div>
-                  <Card.Text>{skill.name}</Card.Text>
-                </Card.Body>
-              </Card>
-            ))}
-          </div>
-          {category === 'backend' && (
-              <p className="mt-4 text-center text-sm text-muted px-8">
-                  ※この中で、Scalaには特別な思い入れがあります．高2の時に夢中になったマイクラ鯖が，学生がScalaを用いて開発したOSSであったことが私のプログラマ人生のきっかけです．
-            </p>
-          )}
-        </div>
-      ))}
-    </section>
-  );
+    return (
+        <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-900">
+            <div className="container mx-auto px-4">
+                <h2 className="text-4xl font-bold text-center mb-4 text-gray-800 dark:text-white">技術スタック</h2>
+                {Object.entries(skills).map(([category, list]) => (
+                    <div key={category} className="mb-12 last:mb-0">
+                        <h3 className="text-2xl font-semibold mb-6 text-center text-gray-700 dark:text-gray-300">{category}</h3>
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                            {list.map(skill => (
+                                <SkillCard key={skill.name} skill={skill} />
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
 }
