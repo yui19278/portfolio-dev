@@ -42,7 +42,7 @@ export interface Skill {
 export const skills: Record<string, Skill[]> = {
   backend: [
     { name: 'Scala',  icon: <SiScala /> ,           comment:
-            'Scala には特別な思い入れがあります. 高 2 のとき夢中になったマイクラ鯖が, 学生が Scala で開発した OSS だったことが私のプログラマ人生の原点です',  },
+            '高 2 のとき夢中になったマイクラ鯖が, 学生が Scala で開発した OSS だったことが私のプログラマ人生の原点です',  },
     { name: 'Java',   icon: <FaJava />,             comment: 'はじめて触ったバックエンド言語です'},
     { name: 'Kotlin', icon: <SiKotlin />,           comment: 'インターンでLine風メモ帳アプリを作成する際に使用しました' },
     { name: 'Python', icon: <SiPython />,           comment: 'Discord bot を開発する際に使っています'   },
@@ -91,7 +91,7 @@ export const skills: Record<string, Skill[]> = {
     { name: 'Confluence', icon: <SiConfluence />,   comment: 'インターンで読み漁りました' },
     { name: 'Jira',       icon: <SiJira />,         comment: 'インターンで使用'       },
     { name: 'Redmine',    icon: <SiRedmine /> ,     comment: 'アルバイトや趣味開発で使用'  },
-    { name: 'ClickUp',    icon: <SiClickup /> ,     comment: 'アルバイトで使用. デザインがおしゃれです' },
+    { name: 'ClickUp',    icon: <SiClickup /> ,     comment: 'アルバイトで使用. デザインがおしゃれですよね' },
     { name: 'Obsidian',   icon: <SiObsidian /> ,    comment: '日々のメモ帳. これを使い始める前は VS Code でメモを書いていました'},
     { name: 'Slack',      icon: <SiSlack /> ,       comment: 'おすすめのチャンネルがあれば教えてください !'  },
   ],
