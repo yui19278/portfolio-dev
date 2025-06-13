@@ -8,27 +8,34 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   vite: {
-      plugins: [
-          tailwindcss(),
+    server: {
+      host: '0.0.0.0',
+      port: 4321,
+      strictPort: true,
+      allowedHosts: [
+        'yui19278.com',
+        'localhost',
+        '127.0.0.1',
       ],
+      // ? ??? proxy ???
+      proxy: {
+        '/api': {
+          target: 'http://localhost:9000',
+          changeOrigin: true,
+        },
+      },
+    },
+    plugins: [
+      tailwindcss(),
+    ],
   },
   site: "https://yui19278.github.io/",
   base: "/",
   integrations: [
-      react(),
-      tailwindcss({
-        config: { path: './tailwind.config.js' },
-      }),
-      mdx(),
-      sitemap(),
-      icon()],
-
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:9000',
-        changeOrigin: true,
-      }
-    }
-  }
+    react(),
+    tailwindcss({ config: { path: './tailwind.config.js' } }),
+    mdx(),
+    sitemap(),
+    icon(),
+  ],
 });
