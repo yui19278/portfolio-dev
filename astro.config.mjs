@@ -7,6 +7,9 @@ import icon from "astro-icon";
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  devToolbar: {
+      enabled: false
+  },
   vite: {
     server: {
       host: '0.0.0.0',
